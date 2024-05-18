@@ -20,3 +20,56 @@
 重新調整堆積，使其滿足堆積性質。
 重複以上步驟，直到整個陣列排序完成
 
+#提問詞:請用Python寫出二元搜尋樹的演算法
+def binary_search_recursive(data, low, high, key):
+    if low > high:
+        return -1
+    mid = (low + high) // 2
+    if key == data[mid]:
+        return mid
+    elif key > data[mid]:
+        return binary_search_recursive(data, mid + 1, high, key)
+    else:
+        return binary_search_recursive(data, low, mid - 1, key)
+
+data = [1, 9, 2, 7, 4, 10, 3, 8, 5, 6]
+data.sort()
+key = 7
+print(data)
+result = binary_search_recursive(data, 0, len(data) - 1, key)
+if result == -1:
+    print("找不到")
+else:
+    print(f"找到索引值 {result}")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
