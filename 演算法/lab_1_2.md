@@ -73,4 +73,4 @@ int main() {
     return 0;
 }
 
-
+![lab_1_2.md](labs_1_2.png)
